@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Webhook Tester</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: #f4f4f4; }
+    h1 { color: #333; }
+    pre { background: #fff; padding: 1rem; border-radius: 5px; }
+    button { padding: 0.5rem 1rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>🔍 Webhook Tester</h1>
+  <p>Webhook URL: <code>http://localhost:3000/webhook</code></p>
+  <button onclick="loadWebhook()">🔄 Letzten Webhook abrufen</button>
+  <pre id="output">Noch kein Webhook empfangen.</pre>
+
+  <script>
+    async function loadWebhook() {
+      const res = await fetch('http://localhost:3000/latest');
+      const data = await res.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
