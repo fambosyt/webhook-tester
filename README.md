@@ -12,5 +12,5 @@ Ein einfaches Tool zum Empfangen und Anzeigen von Webhook-Nachrichten. Ideal zum
 
 1. Repository klonen:
    ```bash
-   git clone https://github.com/deinname/webhook-tester.git
+   git clone https://github.com/fambosyt/webhook-tester.git
    cd webhook-tester
